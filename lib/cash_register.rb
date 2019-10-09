@@ -1,13 +1,20 @@
 require 'pry'
 
 class CashRegister
+<<<<<<< HEAD
   attr_accessor :total, :discount, :items, :prices
+=======
+  attr_accessor :total, :discount, :items
+>>>>>>> 467ccfbe6ae6d638ea8d3ae5f7d5133ee989e065
   
   def initialize(discount = 0)
     @total = 0
     @discount = discount
     @items = []
+<<<<<<< HEAD
     @prices = []
+=======
+>>>>>>> 467ccfbe6ae6d638ea8d3ae5f7d5133ee989e065
   end
   
   def add_item(title, price, quantity = 1)
@@ -15,6 +22,7 @@ class CashRegister
     quantity.times do 
       self.items.push(title)
     end
+<<<<<<< HEAD
     
     self.prices.push(price * quantity)
   end
@@ -35,5 +43,12 @@ class CashRegister
     self.prices.each do |price| 
       self.total += price 
     end
+=======
+  end
+  
+  def apply_discount
+    binding.pry
+    return discount
+>>>>>>> 467ccfbe6ae6d638ea8d3ae5f7d5133ee989e065
   end
 end
